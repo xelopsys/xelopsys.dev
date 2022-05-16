@@ -15,7 +15,7 @@ export default function Header() {
 				src={`https://www.googletagmanager.com/gtag/js?id=UA-213502733-1`}
 			/>
 
-			<Script strategy="lazyOnload">
+			<Script strategy="lazyOnload" id="">
 				{`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -25,29 +25,32 @@ export default function Header() {
             });
                 `}
 			</Script>
+			<Script
+				src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+				integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+				crossOrigin="anonymous"
+				id=""
+			></Script>
+			<Script
+				src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+				integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+				crossOrigin="anonymous"
+				id=""
+			></Script>
+			<Script
+				src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+				integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+				crossOrigin="anonymous"
+				id=""
+			></Script>
 
 			{/* Head  */}
 			<Head>
 				<link rel="shortcut icon" href="icon.ico" type="image/x-icon" />
-				<script
-					src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-					integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-					crossOrigin="anonymous"
-				/>
-				<script
-					src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-					integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-					crossOrigin="anonymous"
-				/>
-				<script
-					src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-					integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-					crossOrigin="anonymous"
-				/>
 			</Head>
 			<nav className="navbar navbar-expand-lg navbar-light bg-light shadow-lg position-sticky sticky-top">
 				<div className=" mr-auto">
-					<Link href="/">
+					<Link href="/" passHref>
 						<img
 							src="/xelop.ico"
 							className={styles.logo1}

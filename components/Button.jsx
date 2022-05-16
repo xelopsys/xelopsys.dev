@@ -30,19 +30,19 @@ export default function SimpleMenu() {
                 onClose={handleClose}
 
             >
-                <Link href="/">
+                <Link href="/" passHref>
                     <MenuItem className={styles.menu} onClick={handleClose}>Home</MenuItem>
                 </Link>
-                <Link href="about">
+                <Link href="about" passHref>
                     <MenuItem className={styles.menu} onClick={handleClose}>About</MenuItem>
                 </Link>
-                <Link href="projects">
+                <Link href="projects" passHref>
                     <MenuItem className={styles.menu} onClick={handleClose}>Projects</MenuItem>
                 </Link>
-                <Link href="blog">
+                <Link href="blog" passHref>
                     <MenuItem className={styles.menu} onClick={handleClose}>Blog</MenuItem>
                 </Link>
-                <Link href="socials">
+                <Link href="socials" passHref>
                     <MenuItem className={styles.menu} onClick={handleClose}>Socials</MenuItem>
                 </Link>
 

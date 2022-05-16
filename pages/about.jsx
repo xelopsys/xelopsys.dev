@@ -49,19 +49,19 @@ export default function About() {
 
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              <h1 className="display-5" style={{ fontFamily: "regular" }}>Hope, you're alright!</h1>
+              <h1 className="display-5" style={{ fontFamily: "regular" }}>Hope, you{`'`}re alright!</h1>
               <p className="">
                 I am, <i>Jamshid Jurakulov,</i> working as
-                <b> Front-End Developer</b> 20 y.o; Worked in different companies and in agencies. I'm working in this sphere for more than 2 years and I was able to accomplish different projects in different spheres.
+                <b> Front-End Developer</b> 20 y.o; Worked in different companies and in agencies. I{`'`}m working in this sphere for more than 2 years and I was able to accomplish different projects in different spheres.
                 <br />
                 <br />
                 <b style={{ fontFamily: "boldFont" }}>
-                  A guy with an ambition and seeking for a "proper" way to make his life even better.
+                  A guy with an ambition and seeking for a {`'`}proper{`'`} way to make his life even better.
                 </b>
               </p>
               <br />
               <p className={styles.quote}>
-                "Make it worthy..."
+                {`'`}Make it worthy...{`'`}
               </p>
               <br />
               <p className={styles.word1}>Jamshid Jurakulov.</p>

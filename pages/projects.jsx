@@ -29,7 +29,7 @@ export default function Projects() {
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon.ico" />
 
 
-        <title>Project | projects' page</title>
+        <title>Project | projects{`'`}page</title>
 
       </Head>
       <Header />
@@ -42,14 +42,14 @@ export default function Projects() {
 
         <div className="container-fluid">
           <div className="row w-100 h-100 d-flex flex-wrap justify-content-center align-items-center">
-            <Link href="/web">
+            <Link href="/web" passHref>
               <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 project text-center">
                 <h1 className="display-5 text-center">Web development</h1>
                 <p>Projects</p>
               </div>
             </Link>
 
-            <Link href="/smm">
+            <Link href="/smm" passHref>
               <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 project text-center">
                 <h1 className="display-5 text-center">Social Media Marketing</h1>
                 <p>Projects</p>

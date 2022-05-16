@@ -54,7 +54,7 @@ export default function Blog({ posts }) {
                         </p> */}
                         {posts && posts.map((post) =>
                         (
-                            <Link href={`/blog/${post.attributes.slug}`} key={post.id}>
+                            <Link href={`/blog/${post.attributes.slug}`} key={post.id} passHref>
                                 <a key={post.id}>
                                     <div className={css.imgWrapper} key={post.id}>
                                         <img src="http://localhost:1337/uploads/large_photo_2022_05_10_15_27_27_599f96e651.jpeg" alt="" />

@@ -45,9 +45,9 @@ export default function Home() {
               Glad, to see ya!
             </h1>
             <p className="lead ">
-              <b className={styles.bolder}>pro'.gram.mer</b> An organism that converts caffeine into code
+              <b className={styles.bolder}>pro{`'`}.gram.mer</b> An organism that converts caffeine into code
             </p>
-            <p>Maybe you need a cup of coffee ma' dear?</p>
+            <p>Maybe you need a cup of coffee ma{`'`}dear?</p>
           </div>
         </div>
 

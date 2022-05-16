@@ -57,7 +57,7 @@ export default function Web() {
                   Official website of IT TECHNO PARK study center. The author is me....
                 </p>
                 <p className="card-text">
-                  <a href="https://it-technopark.netlify.app/" target="_blank">
+                  <a href="https://it-technopark.netlify.app/" target="_blank" rel="noreferrer">
                     <button className="btn w-100">
                       IT Techno Park Karshi
                     </button>
@@ -78,7 +78,7 @@ export default function Web() {
                   Official website of national restaurant. Made in menu-website style. Easy to load and attractive.
                 </p>
                 <p className="card-text">
-                  <a href="https://oltinvodiy.netlify.app/" target="_blank">
+                  <a href="https://oltinvodiy.netlify.app/" target="_blank" rel="noreferrer">
                     <button className="btn w-100">
                       Oltin Vodiy taomlari
                     </button>

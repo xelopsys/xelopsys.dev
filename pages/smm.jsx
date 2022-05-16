@@ -35,7 +35,7 @@ export default function Web() {
                   Personal Brand
                 </p>
                 <p className="card-text">
-                  <a href="https://www.instagram.com/dilorom_raimxojayeva/" target="_blank">
+                  <a href="https://www.instagram.com/dilorom_raimxojayeva/" target="_blank" rel="noreferrer">
                     <button className="btn w-100">
                       Instagram
                     </button>
@@ -52,7 +52,7 @@ export default function Web() {
                   Construction and Building Company
                 </p>
                 <p className="card-text">
-                  <a href="https://www.instagram.com/gigantgroup.uz/" target="_blank">
+                  <a href="https://www.instagram.com/gigantgroup.uz/" target="_blank" rel="noreferrer">
                     <button className="btn w-100">
                       Instagram
                     </button>
@@ -69,7 +69,7 @@ export default function Web() {
                   Online Book shop
                 </p>
                 <p className="card-text">
-                  <a href="https://www.instagram.com/casebook.uz/" target="_blank">
+                  <a href="https://www.instagram.com/casebook.uz/" target="_blank" rel="noreferrer">
                     <button className="btn w-100">
                       Instagram
                     </button>
