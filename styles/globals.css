@@ -1,0 +1,48 @@
+@font-face {
+	font-family: myFont;
+	src: url("./peu\ neumachine/PPNeueMachina-Light.otf");
+}
+@font-face {
+	font-family: regular;
+	src: url("./peu\ neumachine/PPNeueMachina-Regular.otf");
+}
+@font-face {
+	font-family: boldFont;
+	src: url("./peu\ neumachine/PPNeueMachina-Ultrabold.otf");
+}
+
+html,
+body {
+	/*background-attachment: fixed!important;*/
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Agency FB,
+		sans-serif;
+}
+html {
+	scroll-behavior: smooth !important;
+	overflow: scroll;
+	overflow-x: hidden !important;
+	overflow-y: auto;
+}
+
+span {
+	text-decoration: none;
+	color: #ffdbc5 !important;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	font-family: myFont;
+
+	box-sizing: border-box;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+}
