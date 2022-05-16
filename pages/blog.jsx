@@ -10,8 +10,11 @@ import Footer from "../components/Footer"
 // import { FcLike } from "react-icons/fc";
 import css from "../styles/blog.module.css"
 
+
+// const file = `process.env`
+
 export default function Blog({ posts }) {
-    const Img = "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+    // const Img = "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
     return (
         <div className={styles.container}>
             <Head>
@@ -57,7 +60,7 @@ export default function Blog({ posts }) {
                             <Link href={`/blog/${post.attributes.slug}`} key={post.id} passHref>
                                 <a key={post.id}>
                                     <div className={css.imgWrapper} key={post.id}>
-                                        <img src="http://localhost:1337/uploads/large_photo_2022_05_10_15_27_27_599f96e651.jpeg" alt="" />
+                                        <img src={process.env.STRAPI_UPLOAD + 'photo_2022_05_10_15_27_27_8ab613fd53.jpeg'} alt="" />
                                         <div className={css.overlay}>
                                             <h2>{post.attributes.title}</h2>
                                             <p>{post.attributes.content.slice(0, 50) + "..."}</p>
@@ -111,7 +114,7 @@ export default function Blog({ posts }) {
 
 export async function getStaticProps() {
 
-    const res = await fetch('http://localhost:1337/api/posts')
+    const res = await fetch(process.env.STRAPI_API)
     const data = await res.json()
     const posts = data.data
     // console.log(posts)
