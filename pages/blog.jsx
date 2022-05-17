@@ -122,7 +122,7 @@ export async function getStaticProps() {
     const posts = data.data
     // const img = await fetch(`${process.env.STRAPI_API}?populate=img`).then(res => res.json())
     // console.log()
-    const image = img.data.map(post => post.attributes.img.data.attributes.url)
+    const image = await img.data.map(post => post.attributes.img.data.attributes.url)
     const thumb = image.toString()
     // console.log(posts[0].id)
     // console.log(posts[0].attributes.title)
