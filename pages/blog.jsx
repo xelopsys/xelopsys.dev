@@ -58,7 +58,7 @@ export default function Blog({ posts }) {
                         {posts && posts.map((post) =>
                         (
                             <Link href={`/${post.attributes.slug}`} key={post.id} passHref >
-                                <a key={post.id} style={{ margin: "20px 0 40px 0" }} target="_blank" rel="noreferrer">
+                                <a key={post.id} style={{ margin: "20px 0 40px 0" }}>
                                     <div className={css.imgWrapper} key={post.id}>
                                         <img src={`${process.env.STRAPI_URL}${post.attributes.img.data.attributes.url}`} alt="" />
                                         <div className={css.overlay}>
