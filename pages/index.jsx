@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 // import Link from "next/link";
 // import Typical from "react-typical";
 import Header from "../components/Header"
-import Footer from "../components/Footer"
+// import Footer from "../components/Footer"
 import Star from "./star"
 
 
@@ -54,7 +54,7 @@ export default function Home() {
       </main>
 
 
-      <Footer />
+      {/* <Footer /> */}
 
 
       <style jsx>{`

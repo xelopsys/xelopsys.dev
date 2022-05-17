@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header"
-import Footer from "../components/Footer"
+// import Footer from "../components/Footer"
 // import Star from "./star"
 
 export default function Projects() {
@@ -65,7 +65,7 @@ export default function Projects() {
       </main>
 
 
-      <Footer />
+      {/* <Footer /> */}
       <style jsx>{`
         ::selection{
             color: #8d0f0f;

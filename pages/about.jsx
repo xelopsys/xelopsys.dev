@@ -3,7 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 // import Link from "next/link";
 import Header from "../components/Header"
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 // import Star from "./star";
 
 export default function About() {
@@ -73,7 +73,7 @@ export default function About() {
       </main>
 
 
-      <Footer />
+      {/* <Footer /> */}
 
       <style jsx>{`
         ::selection{

@@ -1,10 +1,10 @@
 import Link from "next/link"
 import Head from "next/head"
 import Header from "../components/Header"
-import Footer from "../components/Footer"
+// import Footer from "../components/Footer"
 // import styles from "../../styles/Home.module.css"
 import css from "../styles/blog.module.css"
-
+import axios from "axios"
 
 const file = `process.env`
 
@@ -44,7 +44,7 @@ export default function Post({ id, blogPost, date }) {
                         </p>
                     }
                     <Link href="/blog" passHref key={id}>
-                        <a key={id}>
+                        <a key={id} target="_blank" rel="noreferrer">
                             {true && `<-all posts`}
                         </a>
                     </Link>
@@ -52,7 +52,7 @@ export default function Post({ id, blogPost, date }) {
 
 
             </div>
-            <Footer style={false} />
+            {/* <Footer style={false} /> */}
         </div>
     )
 }
@@ -60,8 +60,8 @@ export default function Post({ id, blogPost, date }) {
 
 
 export async function getStaticPaths() {
-    const res = await fetch(process.env.STRAPI_API)
-    const data = await res.json()
+    const res = await axios.get(process.env.STRAPI_API)
+    const data = res.data
 
     const paths = data.data.map(post => ({
         params: {
@@ -78,20 +78,20 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const { slug } = params
 
-    const res = await fetch(`${process.env.STRAPI_API}/?slug=${slug}`)
-    // console.log(pic)
-    const data = await res.json()
-    const blogPost = data.data[0].attributes
-    // console.log(blogPost.img)
-    const id = data.data[0].id
-    // console.log(blogPost)
-    // console.log(blogPost.attributes.createdAt.split('T')[0].split('-'))
+    const res = await axios.get(`${process.env.STRAPI_API}`)
+    const findOne = res.data
+    const result = findOne.data.find(post => post.attributes.slug === slug)
+
+    const blogPost = result.attributes
+
+    const id = result.id
+
     const date = blogPost.createdAt.split('T')[0].split('-')
     const getData = (date) => {
         const dateString = new Date(date)
         return dateString.toDateString()
     }
-    console.log(getData(date))
+    // console.log(getData(date))
     return {
         props: {
             id,

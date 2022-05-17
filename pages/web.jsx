@@ -3,7 +3,7 @@ import Head from "next/head";
 // import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header"
-import Footer from "../components/Footer"
+// import Footer from "../components/Footer"
 
 export default function Web() {
   return (
@@ -133,7 +133,7 @@ export default function Web() {
 
 
 
-      <Footer />
+      {/* <Footer /> */}
       <style jsx>{`
         ::selection{
             color: #8d0f0f;

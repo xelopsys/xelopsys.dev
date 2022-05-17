@@ -4,16 +4,16 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 // import Typical from "react-typical";
 import Header from "../components/Header"
-import Footer from "../components/Footer"
+// import Footer from "../components/Footer"
 // import Star from "./star"
 // import { Button } from '@material-ui/core/Button';
 // import { FcLike } from "react-icons/fc";
 import css from "../styles/blog.module.css"
-
+import axios from "axios";
 
 // const file = `process.env`
 
-export default function Blog({ posts, thumb }) {
+export default function Blog({ posts }) {
     // const Img = "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
     return (
         <div className={styles.container}>
@@ -57,10 +57,10 @@ export default function Blog({ posts, thumb }) {
                         </p> */}
                         {posts && posts.map((post) =>
                         (
-                            <Link href={`/${post.attributes.slug}`} key={post.id} passHref>
-                                <a key={post.id}>
+                            <Link href={`/${post.attributes.slug}`} key={post.id} passHref >
+                                <a key={post.id} style={{ margin: "20px 0 40px 0" }} target="_blank" rel="noreferrer">
                                     <div className={css.imgWrapper} key={post.id}>
-                                        <img src={`${process.env.STRAPI_URL}${thumb}`} alt="" />
+                                        <img src={`${process.env.STRAPI_URL}${post.attributes.img.data.attributes.url}`} alt="" />
                                         <div className={css.overlay}>
                                             <h2>{post.attributes.title}</h2>
                                             <p>{post.attributes.content.slice(0, 50) + "..."}</p>
@@ -95,7 +95,7 @@ export default function Blog({ posts, thumb }) {
 
 
 
-            <Footer />
+            {/* <Footer /> */}
 
             <style jsx>{`
 
@@ -116,21 +116,23 @@ export default function Blog({ posts, thumb }) {
 
 export async function getStaticProps() {
 
-    const res = await fetch(`${process.env.STRAPI_API}`)
-    const img = await fetch(`${process.env.STRAPI_API}?populate=img`).then(res => res.json())
-    const data = await res.json()
-    const posts = data.data
+    // const res = await fetch(`${process.env.STRAPI_API}`)
+    const res = await axios.get(`${process.env.STRAPI_API}?populate=img`)
+    // const data = await res.json()
+    const posts = res.data.data
+    // console.log(posts)
     // const img = await fetch(`${process.env.STRAPI_API}?populate=img`).then(res => res.json())
     // console.log()
-    const image = await img.data.map(post => post.attributes.img.data.attributes.url)
-    const thumb = image.toString()
+    // const image = await img.data.map(post => post.attributes.img.data.attributes.url)
+    // const thumb = image.toString()
+    // console.log(thumb)
     // console.log(posts[0].id)
     // console.log(posts[0].attributes.title)
 
     return {
         props: {
             posts,
-            thumb
+            // thumb
         }
     }
 }
