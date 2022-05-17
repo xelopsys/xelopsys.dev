@@ -1,9 +1,9 @@
 import Link from "next/link"
 import Head from "next/head"
-import Header from "../../components/Header"
-import Footer from "../../components/Footer"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 // import styles from "../../styles/Home.module.css"
-import css from "../../styles/blog.module.css"
+import css from "../styles/blog.module.css"
 
 
 const file = `process.env`
@@ -26,21 +26,33 @@ export default function Post({ id, blogPost, date }) {
 
             </Head>
             <Header />
-            <div className={css.blogPost}>
+            <div className={css.blogPost} style={blogPost.url ? { height: "max-content" } : { height: "100vh" }}>
                 <div className={css.post}>
                     <p>{date}</p>
                     <h1>{blogPost.title}</h1>
                     <p>{blogPost.content}</p>
-                    <Link href="/blog" key={id}>
-                        <a>
-                            {blogPost && `<-all posts`}
+                    <iframe src={`${blogPost.url}`} className={css.iframe} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    <br />
+                    {blogPost.website &&
+                        <p> Here is official website {'->'}
+                            <a href={`${blogPost.website}`}>{blogPost.title}</a>
+                        </p>
+                    }
+                    {blogPost.social &&
+                        <p> Here is socials {'->'}
+                            <a href={`${blogPost.social}`}>{blogPost.title}</a>
+                        </p>
+                    }
+                    <Link href="/blog" passHref key={id}>
+                        <a key={id}>
+                            {true && `<-all posts`}
                         </a>
                     </Link>
                 </div>
 
 
             </div>
-            <Footer />
+            <Footer style={false} />
         </div>
     )
 }
@@ -67,8 +79,10 @@ export async function getStaticProps({ params }) {
     const { slug } = params
 
     const res = await fetch(`${process.env.STRAPI_API}/?slug=${slug}`)
+    // console.log(pic)
     const data = await res.json()
     const blogPost = data.data[0].attributes
+    // console.log(blogPost.img)
     const id = data.data[0].id
     // console.log(blogPost)
     // console.log(blogPost.attributes.createdAt.split('T')[0].split('-'))

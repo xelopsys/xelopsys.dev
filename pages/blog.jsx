@@ -13,7 +13,7 @@ import css from "../styles/blog.module.css"
 
 // const file = `process.env`
 
-export default function Blog({ posts }) {
+export default function Blog({ posts, thumb }) {
     // const Img = "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
     return (
         <div className={styles.container}>
@@ -57,19 +57,21 @@ export default function Blog({ posts }) {
                         </p> */}
                         {posts && posts.map((post) =>
                         (
-                            <Link href={`/blog/${post.attributes.slug}`} key={post.id} passHref>
+                            <Link href={`/${post.attributes.slug}`} key={post.id} passHref>
                                 <a key={post.id}>
                                     <div className={css.imgWrapper} key={post.id}>
-                                        <img src={process.env.STRAPI_UPLOAD + 'photo_2022_05_10_15_27_27_8ab613fd53.jpeg'} alt="" />
+                                        <img src={`${process.env.STRAPI_URL}${thumb}`} alt="" />
                                         <div className={css.overlay}>
                                             <h2>{post.attributes.title}</h2>
                                             <p>{post.attributes.content.slice(0, 50) + "..."}</p>
                                         </div>
                                     </div>
                                 </a>
+
                             </Link>
                         )
                         )}
+                        {/* <hr /> */}
 
 
                         {/* <Link href="/">
@@ -114,16 +116,21 @@ export default function Blog({ posts }) {
 
 export async function getStaticProps() {
 
-    const res = await fetch(process.env.STRAPI_API)
+    const res = await fetch(`${process.env.STRAPI_API}`)
+    const img = await fetch(`${process.env.STRAPI_API}?populate=img`).then(res => res.json())
     const data = await res.json()
     const posts = data.data
-    // console.log(posts)
+    // const img = await fetch(`${process.env.STRAPI_API}?populate=img`).then(res => res.json())
+    // console.log()
+    const image = img.data.map(post => post.attributes.img.data.attributes.url)
+    const thumb = image.toString()
     // console.log(posts[0].id)
     // console.log(posts[0].attributes.title)
 
     return {
         props: {
-            posts
+            posts,
+            thumb
         }
     }
 }

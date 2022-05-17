@@ -8,23 +8,7 @@ import Script from "next/script";
 export default function Header() {
 	return (
 		<header>
-			{/* Google tag manager */}
 
-			<Script
-				strategy="lazyOnload"
-				src={`https://www.googletagmanager.com/gtag/js?id=UA-213502733-1`}
-			/>
-
-			<Script strategy="lazyOnload" id="">
-				{`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-213502733-1', {
-              page_path: window.location.pathname,
-            });
-                `}
-			</Script>
 			<Script
 				src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 				integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -48,15 +32,16 @@ export default function Header() {
 			<Head>
 				<link rel="shortcut icon" href="icon.ico" type="image/x-icon" />
 			</Head>
-			<nav className="navbar navbar-expand-lg navbar-light bg-light shadow-lg position-sticky sticky-top">
+			<nav className="navbar navbar-expand-lg">
 				<div className=" mr-auto">
 					<Link href="/" passHref>
 						<img
-							src="/xelop.ico"
+							src="/profile.png"
 							className={styles.logo1}
 							alt=""
 							title="xelopsys"
 							id="img"
+							style={{ borderRadius: "50%" }}
 						/>
 					</Link>
 				</div>

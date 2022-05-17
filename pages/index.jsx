@@ -26,7 +26,7 @@ export default function Home() {
           content="Enterpreneur || Jamshid Jurakulov"
         />
         <meta property="og:type" content="form" />
-        <meta property="og:image" content="%PUBLIC_URL%/logo.png" />
+        <meta property="og:image" content="%PUBLIC_URL%/profile.png" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
 
 
@@ -36,8 +36,8 @@ export default function Home() {
       <Header />
 
       <main className={styles.main2}>
-        <Star />
 
+        <Star />
 
         <div className={styles.bigBar}>
           <div className="container d-flex flex-column justify-content-center align-items-center align-content-center p-auto">

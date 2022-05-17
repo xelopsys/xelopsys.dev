@@ -1,6 +1,6 @@
 .imgWrapper {
 	max-width: 55vw;
-	height: 40vh;
+	height: max-content;
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
@@ -9,6 +9,9 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	box-sizing: border-box;
+	/* padding-bottom: 20px; */
+	/* border: 1px solid red; */
 }
 .imgWrapper img {
 	max-width: 100%;
@@ -28,16 +31,19 @@
 	transition: ease-in-out;
 	flex-direction: column;
 	justify-content: flex-end;
-	padding: 0 10px 20px 20px;
+	padding: 5% 5% 2% 5%;
 	opacity: 0;
 	transition: opacity 0.2s;
+	box-sizing: border-box;
+	word-break: keep-all;
+	word-wrap: break-word;
 }
-.overlay h2,
-.overlayp {
+.overlay h2 {
 	transform: translateY(7px);
 	transition: transform 0.1s;
 }
-.overlay h2 {
+.overlay h2,
+.overlay p {
 	transition-delay: 0.1s;
 }
 .imgWrapper:hover img {
@@ -56,24 +62,24 @@
 }
 
 .blogPost {
-	width: 70vw;
-	height: 82vh;
+	/* flex: 1; */
+	width: 100vw;
 	display: flex;
+
+	/* scroll-behavior: smooth; */
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	/* padding: 30px 10px; */
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	/* border-radius: 10px; */
 	text-align: left;
 }
 
 .post {
-	width: 60%;
-	/* height: 82vh; */
-	height: 100%;
-	overflow-y: auto;
-	scroll-behavior: smooth;
+	width: 40%;
+	height: min-content;
+	/* height: 100%; */
 	word-wrap: break-word;
 	word-break: keep-all;
 	display: flex;
@@ -91,4 +97,72 @@
 	/* white-space: nowrap; */
 	/* text-align: left !important; */
 	/* border: 1px solid red; */
+}
+.iframe {
+	width: 100%;
+	height: 300px;
+}
+
+@media (max-width: 910px) {
+	/* .post {
+		width: 100%;
+	} */
+	.blogPost {
+		width: 90vw;
+	}
+	.post {
+		width: 70%;
+	}
+	.overlay {
+		padding-bottom: 1%;
+	}
+	.imgWrapper {
+		max-width: 70vw;
+	}
+	.overlay p {
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 560px) {
+	.imgWrapper {
+		max-width: 92vw;
+	}
+	.blogPost {
+		width: 90vw;
+	}
+	.post {
+		width: 80%;
+	}
+	.overlay {
+		padding-bottom: 10px;
+	}
+	.overlay h2 {
+		font-size: 22px;
+	}
+
+	.overlay p {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 435px) {
+	.imgWrapper {
+		max-width: 96vw;
+		/* height: 45vh; */
+	}
+	.blogPost {
+		width: 86vw;
+	}
+	.post {
+		width: 100%;
+		font-size: smaller;
+	}
+	.overlay h2 {
+		font-size: 20px;
+	}
+
+	.overlay p {
+		font-size: 13px;
+	}
 }

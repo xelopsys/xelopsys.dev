@@ -64,14 +64,14 @@ nav {
 
 footer {
 	/*background:  linear-gradient(to right, rgba(26, 24, 24, 0.87), rgba(129, 4, 4, 0.6))!important;*/
-	background: linear-gradient(
+	/* background: linear-gradient(
 		to right,
 		rgba(0, 0, 0, 1),
 		rgba(0, 0, 0, 1)
-	) !important;
+	) !important; */
 
-	z-index: 1;
-	position: relative;
+	/* z-index: -1; */
+	/* position: relative; */
 	height: max-content;
 	margin: 0;
 	/*position: fixed;*/
@@ -110,19 +110,19 @@ span {
 	position: relative;
 	z-index: 1000;
 }
-.text{
-    cursor: pointer;
+.text {
+	cursor: pointer;
 }
 
 .h5 {
 	/* color: none; */
-    /* text-align: center; */
-    font-weight: bolder;
-    text-transform: uppercase;
-    /* -webkit-text-fill-color: white; Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #ffdbc5;
-    /* font-family: 'Times New Roman', Times, serif; */
+	/* text-align: center; */
+	font-weight: bolder;
+	text-transform: uppercase;
+	/* -webkit-text-fill-color: white; Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #ffdbc5;
+	/* font-family: 'Times New Roman', Times, serif; */
 }
 
 .project {
@@ -138,13 +138,13 @@ span {
 	border-radius: 15px;
 	backdrop-filter: blur(2000px);
 	/* background-color: red; */
-    /* transform: translate(0px, 0px); */
+	/* transform: translate(0px, 0px); */
 }
 .project:hover {
 	backdrop-filter: blur(2000px);
 	background-color: rgba(255, 255, 255, 0.151);
 	cursor: pointer;
-    /* transform: translate(0px, -3px);
+	/* transform: translate(0px, -3px);
     transition-duration: 0.1s; 
     transition-timing-function: linear; */
 }
