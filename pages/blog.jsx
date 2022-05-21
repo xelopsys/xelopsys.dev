@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
@@ -10,8 +10,25 @@ import Header from "../components/Header"
 // import { FcLike } from "react-icons/fc";
 import css from "../styles/blog.module.css"
 import axios from "axios";
+// import Image from "next/image";
 
 // const file = `process.env`
+
+export async function getStaticProps() {
+
+    // const res = await fetch(`${process.env.STRAPI_API}`)
+    const res = await axios.get(`${process.env.STRAPI_API}?populate=img`)
+    // const data = await res.json()
+    const posts = await res.data.data
+    // console.log(posts)
+
+    return {
+        props: {
+            posts,
+            // thumb
+        }
+    }
+}
 
 export default function Blog({ posts }) {
     // const Img = "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
@@ -41,6 +58,7 @@ export default function Blog({ posts }) {
             </Head>
             <Header />
 
+
             <main>
                 {/* <div className="stars"></div>
                 <div className="stars1"></div>
@@ -56,11 +74,11 @@ export default function Blog({ posts }) {
                             See it soon!
                         </p> */}
                         {posts && posts.map((post) =>
-                        (
+
                             <Link href={`/${post.attributes.slug}`} key={post.id} passHref >
                                 <a key={post.id} style={{ margin: "20px 0 40px 0" }}>
                                     <div className={css.imgWrapper} key={post.id}>
-                                        <img src={`${process.env.STRAPI_URL}${post.attributes.img.data.attributes.url}`} alt="" />
+                                        <img src={`https://strapi-ced7b.ondigitalocean.app${post.attributes.img.data.attributes.url}`} alt="" />
                                         <div className={css.overlay}>
                                             <h2>{post.attributes.title}</h2>
                                             <p>{post.attributes.content.slice(0, 50) + "..."}</p>
@@ -69,17 +87,8 @@ export default function Blog({ posts }) {
                                 </a>
 
                             </Link>
-                        )
+
                         )}
-                        {/* <hr /> */}
-
-
-                        {/* <Link href="/">
-                            <a href="">
-                                Back to home
-                            </a>
-
-                        </Link> */}
                     </div>
                 </div>
 
@@ -95,7 +104,6 @@ export default function Blog({ posts }) {
 
 
 
-            {/* <Footer /> */}
 
             <style jsx>{`
 
@@ -114,25 +122,3 @@ export default function Blog({ posts }) {
 
 
 
-export async function getStaticProps() {
-
-    // const res = await fetch(`${process.env.STRAPI_API}`)
-    const res = await axios.get(`${process.env.STRAPI_API}?populate=img`)
-    // const data = await res.json()
-    const posts = res.data.data
-    // console.log(posts)
-    // const img = await fetch(`${process.env.STRAPI_API}?populate=img`).then(res => res.json())
-    // console.log()
-    // const image = await img.data.map(post => post.attributes.img.data.attributes.url)
-    // const thumb = image.toString()
-    // console.log(thumb)
-    // console.log(posts[0].id)
-    // console.log(posts[0].attributes.title)
-
-    return {
-        props: {
-            posts,
-            // thumb
-        }
-    }
-}

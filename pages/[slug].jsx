@@ -44,7 +44,7 @@ export default function Post({ id, blogPost, date }) {
                         </p>
                     }
                     <Link href="/blog" passHref key={id}>
-                        <a key={id} target="_blank" rel="noreferrer">
+                        <a>
                             {true && `<-all posts`}
                         </a>
                     </Link>
