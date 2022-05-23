@@ -9,10 +9,11 @@ import axios from "axios"
 const file = `process.env`
 
 export default function Post({ id, blogPost, date }) {
+    const url = `https://xelopsys.uz`
     return (
         <div className="h-100">
             <Head >
-                <title>{blogPost.title}</title>
+                <title>Blog content</title>
                 <meta name="description" content={blogPost.content} />
                 <meta property="og:title" content={blogPost.title} />
                 {/* <meta property="og:description" content={blogPost.description} /> */}
@@ -26,12 +27,14 @@ export default function Post({ id, blogPost, date }) {
 
             </Head>
             <Header />
-            <div className={css.blogPost} style={blogPost.url ? { height: "max-content" } : { height: "100vh" }}>
+            <div className={css.blogPost} style={blogPost.url ? { height: "max-content" } : { height: "max-content" }}>
                 <div className={css.post}>
                     <p>{date}</p>
                     <h1>{blogPost.title}</h1>
                     <p>{blogPost.content}</p>
-                    <iframe src={`${blogPost.url}`} className={css.iframe} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    {blogPost.url ?
+                        <iframe src={`${blogPost.url}`} className={css.iframe} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        : null}
                     <br />
                     {blogPost.website &&
                         <p> Here is official website {'->'}

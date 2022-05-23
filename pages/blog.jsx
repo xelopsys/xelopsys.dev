@@ -11,6 +11,7 @@ import Header from "../components/Header"
 import css from "../styles/blog.module.css"
 import axios from "axios";
 // import Image from "next/image";
+import Star from "./star"
 
 // const file = `process.env`
 
@@ -31,6 +32,7 @@ export async function getStaticProps() {
 }
 
 export default function Blog({ posts }) {
+    const imgUrl = 'https://strapi-ced7b.ondigitalocean.app'
     // const Img = "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
     return (
         <div className={styles.container}>
@@ -58,8 +60,8 @@ export default function Blog({ posts }) {
             </Head>
             <Header />
 
-
             <main>
+                <Star />
                 {/* <div className="stars"></div>
                 <div className="stars1"></div>
                 <div className="stars2"></div> */}
@@ -78,7 +80,10 @@ export default function Blog({ posts }) {
                             <Link href={`/${post.attributes.slug}`} key={post.id} passHref >
                                 <a key={post.id} style={{ margin: "20px 0 40px 0" }}>
                                     <div className={css.imgWrapper} key={post.id}>
-                                        <img src={`https://strapi-ced7b.ondigitalocean.app${post.attributes.img.data.attributes.url}`} alt="" />
+                                        {/* <img src={`https://strapi-ced7b.ondigitalocean.app${post.attributes.img.data.attributes.url}`} alt="" /> */}
+                                        <div className={css.img} style={{ backgroundImage: `url(${imgUrl}${post.attributes.img.data.attributes.url})` }}>
+
+                                        </div>
                                         <div className={css.overlay}>
                                             <h2>{post.attributes.title}</h2>
                                             <p>{post.attributes.content.slice(0, 50) + "..."}</p>

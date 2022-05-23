@@ -1,5 +1,5 @@
 .imgWrapper {
-	max-width: 55vw;
+	width: 55vw;
 	height: max-content;
 	position: relative;
 	cursor: pointer;
@@ -13,9 +13,13 @@
 	/* padding-bottom: 20px; */
 	/* border: 1px solid red; */
 }
-.imgWrapper img {
-	max-width: 100%;
-	display: block;
+.imgWrapper .img {
+	width: 100%;
+	height: 300px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: inline;
 	transition: transform 0.3s;
 }
 .overlay {
@@ -46,7 +50,7 @@
 .overlay p {
 	transition-delay: 0.1s;
 }
-.imgWrapper:hover img {
+.imgWrapper:hover .img {
 	transform: scale(1.016);
 }
 .imgWrapper:hover .overlay {
@@ -117,7 +121,7 @@
 		padding-bottom: 1%;
 	}
 	.imgWrapper {
-		max-width: 70vw;
+		width: 70vw;
 	}
 	.overlay p {
 		font-size: 17px;
@@ -126,7 +130,7 @@
 
 @media (max-width: 560px) {
 	.imgWrapper {
-		max-width: 92vw;
+		width: 92vw;
 	}
 	.blogPost {
 		width: 90vw;
@@ -148,7 +152,7 @@
 
 @media (max-width: 435px) {
 	.imgWrapper {
-		max-width: 96vw;
+		width: 96vw;
 		/* height: 45vh; */
 	}
 	.blogPost {

@@ -30,6 +30,7 @@ export default function Home() {
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
 
 
+
         <title>Xelopsys | main page</title>
 
       </Head>
@@ -40,7 +41,7 @@ export default function Home() {
         <Star />
 
         <div className={styles.bigBar}>
-          <div className="container d-flex flex-column justify-content-center align-items-center align-content-center p-auto">
+          <div className="container d-flex flex-column justify-content-center align-items-center align-content-center p-auto m-1">
             <h1 className="display-4 " style={{ fontFamily: "regular" }}>
               Glad, to see ya!
             </h1>
