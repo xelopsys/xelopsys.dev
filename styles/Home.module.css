@@ -153,15 +153,24 @@
 .bigBar {
 	/* position: relative; */
 	width: 100vw;
-	height: 47vh;
+	height: 30vh;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-content: flex-start;
 	text-align: center;
 	justify-content: flex-start;
 	align-items: flex-start;
 	padding: 10px !important;
 	/* vertical-align: middle; */
+}
+.lilBar {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	line-height: 1.7em;
 }
 .postsBar {
 	width: 100%;
@@ -396,7 +405,7 @@
 
 @media (max-height: 675px) {
 	.bigBar {
-		padding-top: 80px !important;
+		/* padding-top: 40px !important; */
 	}
 	.main {
 		justify-content: center;

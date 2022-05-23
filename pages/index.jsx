@@ -41,14 +41,14 @@ export default function Home() {
 
         <Star />
         <div className={styles.bigBar}>
-          <div className="h-100">
+          <div className={styles.lilBar}>
             <h1 className="display-4 " style={{ fontFamily: "regular" }}>
               Glad, to see ya!
             </h1>
-            <p className="lead ">
+            <p className="lead">
               <b className={styles.bolder}>pro{`'`}.gram.mer</b> An organism that converts caffeine into code
             </p>
-            <p>Maybe you need a cup of coffee ma{`'`}dear?</p>
+            <p className="">Maybe you need a cup of coffee ma{`'`}dear?</p>
           </div>
         </div>
 
