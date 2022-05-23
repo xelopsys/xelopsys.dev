@@ -41,7 +41,7 @@ export default function Home() {
 
         <Star />
         <div className={styles.bigBar}>
-          <div >
+          <div className="h-100">
             <h1 className="display-4 " style={{ fontFamily: "regular" }}>
               Glad, to see ya!
             </h1>

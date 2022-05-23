@@ -54,7 +54,7 @@
 	/*background-image: url("../public/back.webp") !important;*/
 	/* background-position: center; */
 	/*position: relative;*/
-	z-index: 1000;
+	/* z-index: 1000; */
 	overflow: hidden !important;
 	background: radial-gradient(
 		220% 105% at top center,
@@ -153,15 +153,15 @@
 .bigBar {
 	/* position: relative; */
 	width: 100vw;
-	height: 35vh;
+	height: 47vh;
 	display: flex;
 	flex-direction: column;
 	align-content: flex-start;
 	text-align: center;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-start;
 	padding: 10px !important;
-	vertical-align: middle;
+	/* vertical-align: middle; */
 }
 .postsBar {
 	width: 100%;
