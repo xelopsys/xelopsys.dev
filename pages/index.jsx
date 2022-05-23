@@ -38,10 +38,10 @@ export default function Home() {
 
       <main className={styles.main2}>
 
-        <Star />
 
+        <Star />
         <div className={styles.bigBar}>
-          <div className="container d-flex flex-column justify-content-center align-items-center align-content-center p-auto m-1">
+          <div >
             <h1 className="display-4 " style={{ fontFamily: "regular" }}>
               Glad, to see ya!
             </h1>

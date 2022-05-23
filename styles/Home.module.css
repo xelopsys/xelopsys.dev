@@ -45,7 +45,7 @@
 .main2 {
 	position: relative;
 
-	flex: 2;
+	flex: 1;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -54,7 +54,7 @@
 	/*background-image: url("../public/back.webp") !important;*/
 	/* background-position: center; */
 	/*position: relative;*/
-	/* z-index: 1000; */
+	z-index: 1000;
 	overflow: hidden !important;
 	background: radial-gradient(
 		220% 105% at top center,
@@ -151,13 +151,14 @@
 }
 
 .bigBar {
+	/* position: relative; */
 	width: 100vw;
-	height: auto;
+	height: 35vh;
 	display: flex;
 	flex-direction: column;
-	align-content: center;
+	align-content: flex-start;
 	text-align: center;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	padding: 10px !important;
 	vertical-align: middle;
