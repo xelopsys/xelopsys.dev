@@ -404,9 +404,6 @@
 }
 
 @media (max-height: 675px) {
-	.bigBar {
-		/* padding-top: 40px !important; */
-	}
 	.main {
 		justify-content: center;
 		align-items: center;
