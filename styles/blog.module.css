@@ -68,11 +68,13 @@
 .blogPost {
 	/* flex: 1; */
 	width: 100vw;
+
 	display: flex;
 
 	/* scroll-behavior: smooth; */
 	justify-content: center;
 	align-items: center;
+	align-content: center;
 	flex-direction: column;
 	/* padding: 30px 10px; */
 	/* margin: 0 auto; */
@@ -82,12 +84,12 @@
 
 .post {
 	width: 40%;
-	height: min-content;
+	height: max-content;
 	/* height: 100%; */
 	word-wrap: break-word;
 	word-break: keep-all;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: flex-start;
 	align-content: flex-start;
 	flex-direction: column;
@@ -113,6 +115,7 @@
 	} */
 	.blogPost {
 		width: 90vw;
+		text-align: justify;
 	}
 	.post {
 		width: 70%;
@@ -134,6 +137,7 @@
 	}
 	.blogPost {
 		width: 90vw;
+		text-align: justify;
 	}
 	.post {
 		width: 80%;
@@ -156,11 +160,13 @@
 		/* height: 45vh; */
 	}
 	.blogPost {
-		width: 86vw;
+		width: 93vw;
+		text-align: justify;
 	}
 	.post {
-		width: 100%;
+		width: 94%;
 		font-size: smaller;
+		padding-left: 10px;
 	}
 	.overlay h2 {
 		font-size: 20px;
