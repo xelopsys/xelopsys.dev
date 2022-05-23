@@ -67,7 +67,7 @@ export default function Blog({ posts }) {
                 <div className="stars2"></div> */}
 
 
-                <div className={styles.bigBar}>
+                <div >
                     <div className={styles.postsBar}>
                         {/* <h1 className="display-4 ">
                             For now, blog page is building
