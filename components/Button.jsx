@@ -40,9 +40,9 @@ export default function SimpleMenu() {
                 <Link href="/about" passHref>
                     <MenuItem className={styles.menu} onClick={handleClose}>About</MenuItem>
                 </Link>
-                <Link href="/projects" passHref>
+                {/* <Link href="/projects" passHref>
                     <MenuItem className={styles.menu} onClick={handleClose}>Projects</MenuItem>
-                </Link>
+                </Link> */}
 
                 <Link href="/blog" passHref>
                     <MenuItem className={styles.menu} onClick={handleClose}>Blog</MenuItem>
