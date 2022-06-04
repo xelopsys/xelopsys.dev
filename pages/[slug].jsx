@@ -56,6 +56,14 @@ export default function Post({ id, blogPost, date }) {
 
             </div>
             {/* <Footer style={false} /> */}
+            <style jsx>{`
+        ::selection{
+            color: #8d0f0f;
+            background-color: black;
+            }
+  
+        
+      `}</style>
         </div>
     )
 }
