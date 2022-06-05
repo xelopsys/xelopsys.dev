@@ -1,11 +1,12 @@
 import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-// import Link from "next/link";
+import Link from "next/link";
 // import Typical from "react-typical";
 import Header from "../components/Header"
 // import Footer from "../components/Footer"
 import Star from "./star"
+import { async } from './[slug]';
 
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
           content="Enterpreneur || Jamshid Jurakulov"
         />
         <meta property="og:type" content="form" />
+        <meta property="og:icon" content="%PUBLIC_URL%/profile.png" />
         <meta property="og:image" content="%PUBLIC_URL%/profile.png" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
 
@@ -49,6 +51,9 @@ export default function Home() {
               <b className={styles.bolder}>pro{`'`}.gram.mer</b> An organism that converts caffeine into code
             </p>
             <p className="">Maybe you need a cup of coffee ma{`'`}dear?</p>
+            <Link href="/about" passHref>
+              <a> <i> Go read about me..{")"}</i></a>
+            </Link>
           </div>
         </div>
 

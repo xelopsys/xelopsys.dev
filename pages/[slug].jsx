@@ -16,8 +16,8 @@ export default function Post({ id, blogPost, date }) {
                 <title>Blog content</title>
                 <meta name="description" content={blogPost.content} />
                 <meta property="og:title" content={blogPost.title} />
-                {/* <meta property="og:description" content={blogPost.description} /> */}
-                {/* <meta property="og:image" content={blogPost.image} /> */}
+                <meta property="og:description" content={blogPost.description} />
+                <meta property="og:image" content={blogPost.image} />
                 <meta property="og:url" content={`https://xelopsys.com/blog/${id}`} />
                 <meta property="og:type" content="article" />
                 <meta property="og:site_name" content="Xelopsys" />
