@@ -1,6 +1,6 @@
-# Welcome!
+# Hope, you'are alright!
 
-> I am, Jamshid Jurakulov, working as Front-End Developer 20 y.o; Worked in different companies and in agencies. I'm working in this sphere for more than 3 years and I was able to accomplish different projects in different spheres.
+> I am Jamshid Jurakulov,  known as "xelopsys".  20 y.o enthusiast programmer and entrepreneur who is eager to find solutions to the problem.  With 3+ years of experience in Software development, I managed to accomplish different projects with success stories.
 > Trying to make change happen.
 
 <details>
