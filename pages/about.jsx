@@ -51,7 +51,7 @@ export default function About() {
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <h1 className="display-5" style={{ fontFamily: "regular" }}>Hope, you{`'`}re alright!</h1>
               <p className="">
-                I am Jamshid Jurakulov,  known as <b>"xelopsys"</b>.  20 y.o <b>enthusiast programmer</b> and <b>entrepreneur</b> who is eager to find <b>solutions</b> to the problem.  With <b>3+</b> years of experience in Software development, I managed to accomplish different projects with <b>success</b> stories.
+                I am Jamshid Jurakulov,  known as <b>{`'`}xelopsys{`'`}</b>.  20 y.o <b>enthusiast programmer</b> and <b>entrepreneur</b> who is eager to find <b>solutions</b> to the problem.  With <b>3+</b> years of experience in Software development, I managed to accomplish different projects with <b>success</b> stories.
                 <br />
                 <br />
                 <b style={{ fontFamily: "boldFont" }}>
