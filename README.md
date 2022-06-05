@@ -25,18 +25,31 @@ Here are list of the skills I have experience with.
   </summary>
   <br/>
   - HTML5
+  <br/>
   - CSS3
+  <br/>
   - SASS
+    <br/>
   - Bootstrap[4/5]
+    <br/>
   - JQuery
+    <br/>
   - JavaScript (ES6)
+    <br/>
   - TypeScript
+    <br/>
   - ReactJS
+    <br/>
   - NextJS
+    <br/>
   - React Router DOM
+    <br/>
   - Styled-components
+    <br/>
   - Material UI
+    <br/>
   - Tailwindcss
+    <br/>
   - etc.
 </details>
 
@@ -46,10 +59,15 @@ Here are list of the skills I have experience with.
   </summary>
 <br/>
   - Nodejs
+    <br/>
   - Express
+    <br/>
   - JavaScript
+    <br/>
   - TypeScript
+    <br/>
   - MongoDB/Mongoose  
+    <br/>
   - etc.
 
 </details>
