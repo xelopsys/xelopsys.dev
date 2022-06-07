@@ -45,7 +45,7 @@ export default function About() {
 
           <div className="row justify justify-content-center align-items-center p-3">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-3 mb-4 d-flex justify-content-center align-items-center">
-              <img src="/profile.png" className={styles.photo} />
+              <img src="/profile.jpg" className={styles.photo} />
 
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
